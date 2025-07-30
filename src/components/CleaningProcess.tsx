@@ -1,10 +1,7 @@
-import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import cleaningImage from "@/assets/cleaning-process.jpg";
 
 const CleaningProcess = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   const steps = [
     {
       title: "Assessment & Planning",
@@ -38,7 +35,7 @@ const CleaningProcess = () => {
           </p>
         </div>
 
-        <div className="mb-12">
+        <div className="mb-16">
           <img 
             src={cleaningImage} 
             alt="Cleaning Process Overview" 
@@ -46,16 +43,11 @@ const CleaningProcess = () => {
           />
         </div>
 
-        <div 
-          ref={scrollContainerRef}
-          className="flex overflow-x-auto space-x-8 pb-8 scroll-smooth"
-          style={{ scrollSnapType: "x mandatory" }}
-        >
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <Card 
               key={index} 
-              className="min-w-[350px] md:min-w-[400px] bg-card border-border hover:border-primary transition-colors duration-300"
-              style={{ scrollSnapAlign: "start" }}
+              className="bg-card border-border hover:border-primary transition-colors duration-300"
             >
               <CardContent className="p-8">
                 <div className="text-6xl mb-6 text-center">{step.icon}</div>
@@ -76,10 +68,6 @@ const CleaningProcess = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-8">
-          <p className="text-muted-foreground">← Scroll horizontally to explore each step →</p>
         </div>
       </div>
     </section>
