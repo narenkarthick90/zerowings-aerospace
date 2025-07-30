@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import cleaningImage from "@/assets/cleaning-process.jpg";
 
 const CleaningProcess = () => {
   const steps = [
@@ -35,13 +34,6 @@ const CleaningProcess = () => {
           </p>
         </div>
 
-        <div className="mb-16">
-          <img 
-            src={cleaningImage} 
-            alt="Cleaning Process Overview" 
-            className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl"
-          />
-        </div>
 
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
