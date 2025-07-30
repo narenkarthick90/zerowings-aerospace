@@ -2,39 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Zerowings Aerospace Design System - Blue & Black Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core aerospace theme colors */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Aerospace blue primary */
+    --primary: 200 100% 50%;
+    --primary-foreground: 222 84% 4.9%;
+    --primary-glow: 200 100% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary aerospace tones */
+    --secondary: 215 32% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 32% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 200 100% 50%;
+    --accent-foreground: 222 84% 4.9%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 32% 18%;
+    --input: 215 32% 18%;
+    --ring: 200 100% 50%;
+
+    /* Aerospace design system extras */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -101,5 +110,38 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDE2TDE2IDEyTDEyIDE2TDE2IDIwTDE2IDE2WiIgZmlsbD0iIzAwQkZGRiIvPgo8cGF0aCBkPSJNMTYgMTZMMjAgMTJMMjQgMTZMMjAgMjBMMTYgMTZaIiBmaWxsPSIjMDBCRkZGIi8+CjxwYXRoIGQ9Ik0xNiAxNkwxMiAxMkw4IDE2TDEyIDIwTDE2IDE2WiIgZmlsbD0iIzAwQkZGRiIvPgo8L3N2Zz4K"), auto;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom animations for aerospace theme */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px hsl(var(--primary) / 0.5); }
+    50% { box-shadow: 0 0 20px hsl(var(--primary) / 0.8); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .section-gradient {
+    background: var(--gradient-dark);
   }
 }
