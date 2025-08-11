@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Users, Microscope, Target, Shield } from "lucide-react";
 
 const TeamSection = () => {
   return (
@@ -16,7 +17,7 @@ const TeamSection = () => {
         <Card className="bg-card border-border max-w-4xl mx-auto">
           <CardContent className="p-8">
             <div className="text-center space-y-6">
-              <div className="text-6xl mb-6">👥</div>
+              <Users className="w-16 h-16 text-primary mx-auto mb-6" />
               <h3 className="text-3xl font-bold text-foreground mb-6">Student-Founded Innovation</h3>
               
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -30,17 +31,17 @@ const TeamSection = () => {
               
               <div className="grid md:grid-cols-3 gap-6 mt-12">
                 <div className="text-center">
-                  <div className="text-3xl mb-3">🔬</div>
+                  <Microscope className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h4 className="font-semibold text-foreground">Field Learning</h4>
                   <p className="text-sm text-muted-foreground">Learning from real-world applications</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl mb-3">🎯</div>
+                  <Target className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h4 className="font-semibold text-foreground">Purpose-Built</h4>
                   <p className="text-sm text-muted-foreground">Building only what is needed</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl mb-3">🛡️</div>
+                  <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
                   <h4 className="font-semibold text-foreground">Safety First</h4>
                   <p className="text-sm text-muted-foreground">Making safety a first principle</p>
                 </div>

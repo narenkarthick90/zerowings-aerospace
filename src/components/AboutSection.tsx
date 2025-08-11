@@ -1,31 +1,32 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Shield, Wrench, Leaf, BarChart3, Target } from "lucide-react";
 
 const AboutSection = () => {
   const values = [
     {
       title: "Safety",
       description: "We design our systems to remove the need for risky human operations in elevated environments.",
-      icon: "🛡️"
+      icon: Shield
     },
     {
       title: "Practical Innovation",
       description: "We focus on solving specific field level problems through grounded engineering and system design.",
-      icon: "🔧"
+      icon: Wrench
     },
     {
       title: "Sustainability",
       description: "We use water efficient cleaning mechanisms and aim to reduce chemical usage wherever possible.",
-      icon: "🌱"
+      icon: Leaf
     },
     {
       title: "Transparency",
       description: "We prioritize clear communication and data backed performance during every engagement.",
-      icon: "📊"
+      icon: BarChart3
     },
     {
       title: "Precision",
       description: "We choose to build narrow and deep, tailoring our drones for specific maintenance use cases that benefit the most from aerial systems.",
-      icon: "🎯"
+      icon: Target
     }
   ];
 
@@ -78,7 +79,7 @@ const AboutSection = () => {
             {values.map((value, index) => (
               <Card key={index} className="bg-card border-border hover:border-primary transition-colors duration-300">
                 <CardContent className="p-6">
-                  <div className="text-4xl mb-4">{value.icon}</div>
+                  <value.icon className="w-10 h-10 text-primary mb-4" />
                   <h4 className="text-xl font-bold text-foreground mb-3">{value.title}</h4>
                   <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                 </CardContent>

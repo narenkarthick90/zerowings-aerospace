@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { Slider } from "@/components/ui/slider";
+import { Radio } from "lucide-react";
 
 const InteractiveFeatures = () => {
   const [sliderValue, setSliderValue] = useState([50]);
@@ -75,7 +76,7 @@ const InteractiveFeatures = () => {
               <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-6 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-background to-muted flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-4xl mb-4">📡</div>
+                    <Radio className="w-16 h-16 text-primary mx-auto mb-4" />
                     <p className="text-foreground font-semibold mb-2">Live Telemetry Feed</p>
                     <p className="text-muted-foreground text-sm">Real-time drone data visualization</p>
                   </div>

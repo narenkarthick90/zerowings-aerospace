@@ -1,11 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Building2, Wind, Ship, Sun, Flame } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Building Facade Cleaning",
-      icon: "🏢",
+      icon: Building2,
       features: [
         {
           name: "Precision Cleaning",
@@ -23,7 +24,7 @@ const ServicesSection = () => {
     },
     {
       title: "Wind Turbine Maintenance",
-      icon: "💨",
+      icon: Wind,
       features: [
         {
           name: "Blade Cleaning",
@@ -41,7 +42,7 @@ const ServicesSection = () => {
     },
     {
       title: "Ship Hull & Superstructure Cleaning",
-      icon: "🚢",
+      icon: Ship,
       features: [
         {
           name: "Waterline Cleaning",
@@ -59,7 +60,7 @@ const ServicesSection = () => {
     },
     {
       title: "Solar Panel Cleaning",
-      icon: "☀️",
+      icon: Sun,
       features: [
         {
           name: "Water Efficient Spray",
@@ -77,7 +78,7 @@ const ServicesSection = () => {
     },
     {
       title: "Firefighting Support",
-      icon: "🚒",
+      icon: Flame,
       features: [
         {
           name: "Targeted Water or Foam Discharge",
@@ -113,7 +114,7 @@ const ServicesSection = () => {
               <CardContent className="p-0">
                 <div className="p-8">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="text-5xl">{service.icon}</div>
+                    <service.icon className="w-12 h-12 text-primary" />
                     <h3 className="text-3xl font-bold text-foreground">{service.title}</h3>
                   </div>
                   
