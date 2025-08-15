@@ -97,25 +97,27 @@ const PartnershipsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {partnerships.map((partner, index) => (
-            <Card key={index} className="bg-card border-border hover:border-primary transition-colors duration-300 h-full">
-              <CardContent className="p-6 text-center flex flex-col h-full">
-                <div className="flex-shrink-0 mb-4">
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.fullName}
-                    className="h-12 w-auto mx-auto object-contain"
-                  />
-                </div>
-                <Badge variant="outline" className="mb-3 text-xs">
-                  {partner.type}
-                </Badge>
-                <h3 className="text-lg font-bold text-foreground mb-2">{partner.name}</h3>
-                <p className="text-sm text-muted-foreground flex-grow">{partner.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="overflow-hidden">
+          <div className="flex animate-marquee">
+            {[...partnerships, ...partnerships].map((partner, index) => (
+              <Card key={index} className="bg-card border-border hover:border-primary transition-colors duration-300 h-full flex-shrink-0 w-80 mx-4">
+                <CardContent className="p-6 text-center flex flex-col h-full">
+                  <div className="flex-shrink-0 mb-4">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.fullName}
+                      className="h-12 w-auto mx-auto object-contain"
+                    />
+                  </div>
+                  <Badge variant="outline" className="mb-3 text-xs mx-auto">
+                    {partner.type}
+                  </Badge>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{partner.name}</h3>
+                  <p className="text-sm text-muted-foreground flex-grow">{partner.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
