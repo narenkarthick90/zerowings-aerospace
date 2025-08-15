@@ -35,46 +35,24 @@ const ExcellenceCenter = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          <div>
-            <img 
-              src={facilityImage} 
-              alt="Zerowings Excellence Center Facility" 
-              className="w-full rounded-lg shadow-2xl"
-            />
-          </div>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-3xl font-bold text-foreground mb-4">
-                World-Class Facility
-              </h3>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Our state-of-the-art Centre of Excellence houses the most advanced drone technology 
-                and cleaning systems in the aerospace industry. From research and development to 
-                training and certification, every aspect of our operation is designed for excellence.
-              </p>
-            </div>
-            
-            <div className="grid gap-6">
-              {features.map((feature, index) => (
-                <Card key={index} className="bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <feature.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-                      <div>
-                        <h4 className="text-xl font-bold text-foreground mb-2">
-                          {feature.title}
-                        </h4>
-                        <p className="text-muted-foreground">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+        <div className="grid gap-8 mb-16 max-w-4xl mx-auto">
+          {features.map((feature, index) => (
+            <Card key={index} className="bg-card border-border">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <feature.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-muted-foreground">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
