@@ -1,23 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Search, Zap, CheckCircle } from "lucide-react";
 
 const CleaningProcess = () => {
   const steps = [
     {
       title: "Assessment & Planning",
       description: "Our advanced drones conduct comprehensive 3D mapping and surface analysis to create a precise cleaning strategy tailored to your specific aerospace equipment.",
-      icon: "🔍",
+      icon: Search,
       details: ["3D Surface Mapping", "Contamination Analysis", "Custom Protocol Design"]
     },
     {
       title: "Precision Cleaning",
       description: "State-of-the-art drone technology equipped with specialized cleaning systems removes contaminants with unmatched precision and safety.",
-      icon: "🚁",
+      icon: Zap,
       details: ["Automated Cleaning Systems", "Real-time Monitoring", "Zero Contact Damage"]
     },
     {
       title: "Quality Assurance",
       description: "Multi-stage verification ensures every surface meets aerospace industry standards through detailed inspection and certification protocols.",
-      icon: "✅",
+      icon: CheckCircle,
       details: ["Quality Verification", "Compliance Certification", "Performance Reports"]
     }
   ];
@@ -42,7 +43,9 @@ const CleaningProcess = () => {
               className="bg-card border-border hover:border-primary transition-colors duration-300"
             >
               <CardContent className="p-8">
-                <div className="text-6xl mb-6 text-center">{step.icon}</div>
+                <div className="flex justify-center mb-6">
+                  <step.icon className="w-16 h-16 text-primary" />
+                </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
                   Step {index + 1}: {step.title}
                 </h3>
