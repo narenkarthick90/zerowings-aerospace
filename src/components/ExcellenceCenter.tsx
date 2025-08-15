@@ -1,29 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Eye, GraduationCap, Users, Lightbulb, CheckCircle } from "lucide-react";
 import facilityImage from "@/assets/facility.jpg";
 import teamImage from "@/assets/team.jpg";
 
 const ExcellenceCenter = () => {
   const features = [
     {
-      title: "Advanced Research Lab",
-      description: "Cutting-edge facility dedicated to developing next-generation drone cleaning technologies.",
-      icon: "🔬"
+      title: "Drone Showcase",
+      description: "See cutting‑edge drones in action, explore their design, and discover real‑world applications across industries.",
+      icon: Eye
     },
     {
-      title: "Training Academy",
-      description: "Comprehensive training programs for aerospace cleaning specialists and drone operators.",
-      icon: "🎓"
+      title: "Workshops & Training",
+      description: "Hands‑on programs in assembly, programming, flying, and maintenance — building skills for the growing UAV sector.",
+      icon: GraduationCap
     },
     {
-      title: "Quality Standards",
-      description: "Setting industry benchmarks for aerospace cleaning excellence and safety protocols.",
-      icon: "⭐"
-    },
-    {
-      title: "Innovation Hub",
-      description: "Collaborative space where ideas become breakthrough solutions for aerospace challenges.",
-      icon: "💡"
+      title: "Innovation Zone",
+      description: "Collaborate on new ideas, test emerging tech, and tackle real aerospace challenges.",
+      icon: Lightbulb
     }
   ];
 
@@ -35,7 +31,7 @@ const ExcellenceCenter = () => {
             Centre of <span className="text-primary">Excellence</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Leading the aerospace cleaning industry through innovation, training, and uncompromising quality standards
+            A premier hub for learning and innovation in drones and aerospace, connecting students, enthusiasts, and technicians with leading technology and expert mentorship.
           </p>
         </div>
 
@@ -64,7 +60,7 @@ const ExcellenceCenter = () => {
                 <Card key={index} className="bg-card border-border">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <span className="text-3xl">{feature.icon}</span>
+                      <feature.icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <h4 className="text-xl font-bold text-foreground mb-2">
                           {feature.title}
@@ -93,19 +89,19 @@ const ExcellenceCenter = () => {
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <span className="text-primary">✓</span>
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span className="text-foreground">Aerospace Engineering Specialists</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-primary">✓</span>
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span className="text-foreground">Certified Drone Operators</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-primary">✓</span>
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span className="text-foreground">Quality Assurance Experts</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-primary">✓</span>
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span className="text-foreground">Safety Protocol Specialists</span>
               </div>
             </div>
