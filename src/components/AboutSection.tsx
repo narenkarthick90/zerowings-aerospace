@@ -84,13 +84,13 @@ const AboutSection = () => {
         {/* Values */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-foreground mb-12">Our Values</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {values.map((value, index) => (
               <Card key={index} className="bg-card border-border hover:border-primary transition-colors duration-300">
-                <CardContent className="p-6">
-                  <value.icon className="w-10 h-10 text-primary mb-4" />
-                  <h4 className="text-xl font-bold text-foreground mb-3">{value.title}</h4>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                <CardContent className="p-6 text-center">
+                  <value.icon className="w-10 h-10 text-primary mb-4 mx-auto" />
+                  <h4 className="text-lg font-bold text-foreground mb-3">{value.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
