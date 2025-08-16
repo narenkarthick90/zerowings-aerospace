@@ -135,17 +135,6 @@ const DroneSpecifications = () => {
           </CardContent>
         </Card>
 
-        {/* Market Leadership Statement */}
-        <Card className="bg-primary/10 border-primary/20 max-w-4xl mx-auto">
-          <CardContent className="p-8 text-center">
-            <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-            <p className="text-xl text-foreground font-medium leading-relaxed">
-              As <span className="font-bold text-primary">the first</span> to deploy drone enabled cleaning in India, ZW brings{" "}
-              <span className="font-bold text-primary">unmatched speed, safety, and cost efficiency</span>{" "}
-              setting the benchmark before others can catch up.
-            </p>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
