@@ -38,16 +38,25 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             About <span className="text-primary">Zerowings Aerospace</span>
           </h2>
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground">
-            <p>
-              Zerowings Aerospace is a drone technology company solving real world problems in vertical infrastructure and renewable maintenance. We are building autonomous aerial systems designed to improve safety, efficiency, and sustainability in cleaning applications.
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              We develop autonomous drone systems that revolutionize vertical infrastructure maintenance, 
+              making cleaning safer, more efficient, and environmentally sustainable.
             </p>
-            <p>
-              The idea for Zerowings began in early 2025 when we identified the recurring risks and inefficiencies involved in cleaning tall structures and renewable assets. Manual cleaning methods are slow and hazardous. With drones, we offer a smarter and safer alternative that reduces human risk and improves consistency.
-            </p>
-            <p>
-              We are currently focused on product development, pilot deployments, and early partnerships across cities in India. Our systems are tailored for building exteriors, wind turbines, solar panels, and ship superstructures.
-            </p>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">2025</div>
+                <p className="text-sm text-muted-foreground">Founded</p>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">4+</div>
+                <p className="text-sm text-muted-foreground">Target Industries</p>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">100%</div>
+                <p className="text-sm text-muted-foreground">Safety Focused</p>
+              </div>
+            </div>
           </div>
         </div>
 
