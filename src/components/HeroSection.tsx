@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-drone.jpg";
 
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
-          alt="Zerowings Aerospace Drone" 
-          className="w-full h-full object-cover opacity-50"
+          src="/lovable-uploads/c60ddfc6-725b-4a0d-946d-6db426ec9c4e.png" 
+          alt="Zerowings Aerospace Drone Cleaning Building" 
+          className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/40" />
       </div>
