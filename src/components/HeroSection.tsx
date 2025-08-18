@@ -7,7 +7,7 @@ const HeroSection = () => {
         <img 
           src="/lovable-uploads/c60ddfc6-725b-4a0d-946d-6db426ec9c4e.png" 
           alt="Zerowings Aerospace Drone Cleaning Building" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-5"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/40" />
       </div>
