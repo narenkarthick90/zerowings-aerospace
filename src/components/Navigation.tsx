@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -22,8 +23,11 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-primary">
-            Zerowings <span className="text-foreground">Aerospace</span>
+          <div className="flex items-center space-x-3">
+            <img src="/lovable-uploads/811812ba-5137-449b-98c7-1d3c7a93d77f.png" alt="Zerowings Aerospace" className="h-10 w-auto" />
+            <div className="text-2xl font-bold text-primary">
+              Zerowings <span className="text-foreground">Aerospace</span>
+            </div>
           </div>
           
           <div className="hidden md:flex space-x-8">

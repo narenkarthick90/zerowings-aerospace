@@ -16,10 +16,10 @@
     --popover: 224 71% 4%;
     --popover-foreground: 210 40% 98%;
 
-    /* Aerospace blue primary */
-    --primary: 200 100% 50%;
+    /* Cyan primary matching logo */
+    --primary: 187 100% 50%;
     --primary-foreground: 222 84% 4.9%;
-    --primary-glow: 200 100% 70%;
+    --primary-glow: 187 100% 70%;
 
     /* Secondary aerospace tones */
     --secondary: 215 32% 15%;
